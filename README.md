@@ -1,1 +1,21 @@
-# scrcpy-autolaunch
+# Scrcpy Autolaunch
+ Fast display and control your Android devicer
+
+## Tech
+Scrcpy Autolaunch uses a number of open source projects to work properly:
+- [ADB](https://developer.android.com/studio/command-line/adb) - Android Debug Bridge (adb) is a versatile command-line tool that lets you communicate with a device.
+- [Scrcpy](https://github.com/Genymobile/scrcpy) - Provides display and control of Android devices connected via USB or over TCP/IP.
+
+## How to run
+Scrcpy Autolaunch work only on UNIX. And require Python 3.8+
+
+Open your favorite Terminal and run these commands:
+### Linux
+```sh
+python3 main.py
+```
+
+### macOS
+```sh
+python main.py
+```
