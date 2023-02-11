@@ -1,5 +1,5 @@
 # Scrcpy Autolaunch
- Fast display and control your Android devicer
+ Fast display and control your Android device
 
 ## Tech
 Scrcpy Autolaunch uses a number of open source projects to work properly:
@@ -7,7 +7,7 @@ Scrcpy Autolaunch uses a number of open source projects to work properly:
 - [Scrcpy](https://github.com/Genymobile/scrcpy) - Provides display and control of Android devices connected via USB or over TCP/IP.
 
 ## How to run
-Scrcpy Autolaunch work only on UNIX. And require Python 3.8+
+Scrcpy Autolaunch work only on Linux and macOS. And require Python 3.8+
 
 Open your favorite Terminal and run these commands:
 ### Linux
