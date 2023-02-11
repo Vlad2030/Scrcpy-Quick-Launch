@@ -1,5 +1,6 @@
 # Scrcpy Quick Launch
  Fast display and control your Android device
+ ![image](https://user-images.githubusercontent.com/61238982/218225329-0a66b010-ca08-41ce-b2ca-7035892aee84.png)
 
 ## Tech
 Scrcpy Quick Launch uses a number of open source projects to work properly:
