@@ -1,21 +1,27 @@
 import command_line
 import install
+import time
 
 
 if __name__ == "__main__":
-    try:
-        while True:
+    while True:
+        try:
             adb: str = command_line.stdout(
                 command="adb devices",
             )
-            if "unauthorized" in adb:
-                pass
-            elif "device" in adb:
-                break
+        except Exception: 
+            install.packages()
 
-        command_line.send(
-            command="scrcpy",
-        )
+        if "unauthorized" in adb:
+            print("Accept debugging")
 
-    except Exception:
-        install.packages()
+        elif "device\n" in adb:
+            command_line.send(
+                command="scrcpy",
+            )
+            break
+
+        else:
+            print("Connect an android")
+
+        time.sleep(1)

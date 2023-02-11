@@ -14,5 +14,5 @@ def packages() -> any:
                 return os.system("sh linux_arch_install.sh")
         elif "Darwin" in system:
             return os.system("sh mac_os_install.sh")
-    except Exception:
-        return print(Exception)
+    except Exception as excp:
+        return print(excp)
