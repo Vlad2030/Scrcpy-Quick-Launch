@@ -1,7 +1,6 @@
 import distro
-import os
 import platform
-
+import command_line
 
 def packages() -> any:
     system: str = platform.system()
@@ -9,10 +8,10 @@ def packages() -> any:
     try:
         if "Linux" in system:
             if "debian" or "ubuntu" in distr:
-                return os.system("sh linux_deb_install.sh")
+                return command_line.send(command="sh linux_deb_install.sh")
             elif "arch" in distr:
-                return os.system("sh linux_arch_install.sh")
+                return command_line.send(command="sh linux_arch_install.sh")
         elif "Darwin" in system:
-            return os.system("sh mac_os_install.sh")
+            return command_line.send(command="sh mac_os_install.sh")
     except Exception as excp:
         return print(excp)
