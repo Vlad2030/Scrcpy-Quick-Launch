@@ -6,8 +6,9 @@ import time
 if __name__ == "__main__":
     while True:
         try:
-            adb: str = command_line.stdout(
+            adb: str = command_line.send(
                 command="adb devices",
+                stdout=True,
             )
         except Exception: 
             install.packages()
@@ -18,6 +19,7 @@ if __name__ == "__main__":
         elif "device\n" in adb:
             command_line.send(
                 command="scrcpy",
+                stdout=False,
             )
             break
 
